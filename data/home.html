@@ -1,0 +1,654 @@
+﻿<head><title>ජීවීන් වර්ගීකරණය හා නාමකරණය</title></head>
+<style>
+
+
+
+.bbg {
+	background-color:#D9DBD6;
+	margin:0px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor:default;
+}
+
+.bar {
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+	background-color:#009688;
+	width:100%;
+	height:55px;
+	position:fixed;	
+}
+.title {
+	color:#FFFFFF;
+	font-size:30px;
+	margin-left:10px;
+	text-shadow:2px 2px 6px #595959;
+	line-height:55px;
+}
+.btn_back {
+	background-image:url('data/back_btn.png');
+	background-color:#009688;
+	background-repeat:no-repeat;
+	background-position:center;
+	width:55px;
+	height:55px;
+	transition-duration:0.2s;
+	cursor:default;
+	transition-property:background-color;
+}
+.btn_back:hover {
+	background-color:#00C4B0;
+}
+.btn_back:active {
+	background-color:#006F64;
+}
+.menu {
+	height:100%;
+	width:20px;
+	position:fixed;
+	transition-duration:0.5s;
+	cursor:default;
+	transition-property:width;
+}
+.menu:hover {
+	width:270px;
+}
+.mb {
+
+	margin-left:0px;
+	background-color:#FFFFFF;
+	height:90%;
+	width:99%;
+	border-radius:0px 7px 7px 0px;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn_1 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px 0px 0px 0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_1.png');
+	transition-property:background-color,background-align;
+}
+.btn_1:hover {
+	background-color:#00B3A0;
+}
+.btn_2 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_2.png');
+	transition-property:background-color,background-align;
+}
+.btn_2:hover {
+	background-color:#00B3A0;
+}
+.btn_3 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_3.png');
+	transition-property:background-color,background-align;
+}
+.btn_3:hover {
+	background-color:#00B3A0;
+}
+.btn_4 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_4.png');
+	transition-property:background-color,background-align;
+}
+.btn_4:hover {
+	background-color:#00B3A0;
+}
+.btn_5 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_5.png');
+	transition-property:background-color,background-align;
+}
+.btn_5:hover {
+	background-color:#00B3A0;
+}
+.btn_6 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_6.png');
+	transition-property:background-color,background-align;
+}
+.btn_6:hover {
+	background-color:#00B3A0;
+}
+.btn_7 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_7.png');
+	transition-property:background-color,background-align;
+}
+.btn_7:hover {
+	background-color:#00B3A0;
+}
+
+
+.btn_1:active {
+	background-color:#006F64;
+}
+.btn_2:active {
+	background-color:#006F64;
+}
+.btn_3:active {
+	background-color:#006F64;
+}
+.btn_4:active {
+	background-color:#006F64;
+}
+.btn_5:active {
+	background-color:#006F64;
+}
+.btn_6:active {
+	background-color:#006F64;
+}
+.btn_7:active {
+	background-color:#006F64;
+}
+.mb_logo {
+	width:100%;
+	height:120px;
+	background-image:url('data/main_menu/ani_logo.png');
+	background-position:right;
+	border-radius:0px 7px 0px 0px;
+	cursor:default;
+	transition-duration:0.4s;
+	transition-property:opacity;
+}
+.mb_lh {
+	width:100%;
+	height:120px;
+	background-color:#000000;
+	opacity:100;
+	cursor:default;
+	border-radius:0px 7px 0px 0px;
+}
+.mb_logo:hover{
+	opacity:0.6;
+}
+.mb_logo:active{
+	opacity:0.2;
+}
+.face_cut {
+	margin:0px;
+	width:100%;
+	height:55px;
+}
+.face {
+	margin-top:30px;
+	margin-right:30px;
+	margin-left:50px;
+}
+.img_1 {
+	background-image:url('data/img/plant_choose.png');
+	height:210px;
+	width:250px;
+	border-radius:7px 7px 0px 0px;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+.img_2 {
+	background-image:url('data/img/animal_choose.png');
+	height:210px;
+	width:250px;
+	border-radius:7px 7px 0px 0px;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+.img_3 {
+	background-image:url('data/img/small_choose.png');
+	height:210px;
+	width:250px;
+	border-radius:7px 7px 0px 0px;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+.img_h {
+	height:210px;
+	width:250px;
+	background-color:#000000;
+	opacity:0;
+	cursor:default;
+	border-radius:7px 7px 0px 0px;
+	transition-duration:0.3s;
+	transition-property:opacity;
+}
+.img_h:hover {
+	opacity:0.5;
+}
+
+.img_h:active {
+	opacity:0.8;
+}
+
+.img_d {
+	height:60px;
+	width:250px;
+	line-height:60px;
+	font-size:25px;
+	color:#000000;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+	border-radius:0px 0px 7px 7px;
+	background-color:#FFFFFF;
+	transition-duration:0.3s;
+	transition-property:opacity;
+}
+
+.link {
+	text-decoration:none;
+	cursor:default;	
+}
+
+.blk_1 {
+	background-color:#FFFFFF;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.1);
+	background-image:url('data/full_group/blk_1.png');
+	background-position:center;
+	border-radius:7px;
+	height:40px;
+	width:200px;
+	line-height:40px;
+	font-size:30px;
+	color:#333333;
+	text-align:center;
+	transition-duration:0.3s;
+	transition-property:box-shadow,background-color,color;
+	
+}
+
+.blk_1:hover {
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.6);
+}
+.blk_1:active {
+	box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.8);
+	background-color: rgb(0,150,136);
+}
+.blk_2:hover {
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.6);
+}
+.blk_2:active {
+	box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.8);
+	background-color: rgb(0,150,136);
+}
+.blk_3:hover {
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.6);
+}
+.blk_3:active {
+	box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.8);
+	background-color: rgb(0,150,136);
+}
+.blk_1_1 {
+	background-color:#FFFFFF;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+	background-image:url('data/full_group/blk_1_1.png');
+	background-position:center;
+	border-radius:7px;
+	height:200px;
+	width:200px;
+	line-height:40px;
+	font-size:25px;
+	color:#333333;
+	text-align:center;
+	
+}
+.blk_1_2 {
+	background-color:#FFFFFF;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+	background-image:url('data/full_group/blk_1_2.png');
+	background-position:center;
+	border-radius:7px;
+	height:200px;
+	width:200px;
+	line-height:40px;
+	font-size:25px;
+	color:#333333;
+	text-align:center;
+	
+}
+.blk_2 {
+	background-color:#FFFFFF;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.1);
+	background-image:url('data/full_group/blk_2.png');
+	background-position:center;
+	border-radius:7px;
+	height:40px;
+	width:200px;
+	line-height:40px;
+	font-size:25px;
+	color:#333333;
+	text-align:center;
+	transition-duration:0.3s;
+	transition-property:box-shadow,background-color,color;
+	
+}
+.blk_2_1 {
+	background-color:#FFFFFF;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+	background-image:url('data/full_group/blk_2_1.png');
+	background-position:center;
+	border-radius:7px;
+	height:200px;
+	width:200px;
+	line-height:40px;
+	font-size:25px;
+	color:#333333;
+	text-align:center;
+	
+}
+.blk_2_2 {
+	background-color:#FFFFFF;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+	background-image:url('data/full_group/blk_2_2.png');
+	background-position:center;
+	border-radius:7px;
+	height:200px;
+	width:200px;
+	line-height:40px;
+	font-size:25px;
+	color:#333333;
+	text-align:center;
+	
+}
+.blk_3 {
+	background-color:#FFFFFF;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.1);
+	background-image:url('data/full_group/blk_3.png');
+	background-position:center;
+	border-radius:7px;
+	height:40px;
+	width:200px;
+	line-height:40px;
+	font-size:25px;
+	color:#333333;
+	text-align:center;
+	transition-duration:0.3s;
+	transition-property:box-shadow,background-color,color;
+}
+.blk_3_1 {
+	background-color:#FFFFFF;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+	background-image:url('data/full_group/blk_3_1.png');
+	background-position:center;
+	border-radius:7px;
+	height:200px;
+	width:200px;
+	line-height:40px;
+	font-size:25px;
+	color:#333333;
+	text-align:center;
+	
+}
+
+.blk_h {
+	height:200px;
+	width:200px;
+	background-color:#000000;
+	opacity:0;
+	color:transparent;
+	border-radius:7px;
+	transition-duration:0.3s;
+	transition-property:opacity,color;
+}
+.blk_h:hover {
+	opacity:0.5;
+	color:FFFFFF;
+}
+.blk_h:active {
+	opacity:0.8;
+}
+.ad {
+	text-decoration:none;
+	color:#FFFFFF;
+}
+.ad:hover {
+	text-decoration:underline;
+}
+
+
+
+
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#wrapper
+{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+
+#style-2::-webkit-scrollbar-track
+{
+	background-image:url('data/scrl_track.png');
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	border-radius: 0px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 16px;
+	background-color: #F5F5F5;
+	max-height: 50px;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 0px;
+	background-color: #009688;
+	background-image:url('data/scroll.png');
+	background-repeat:no-repeat;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	opacity:0.4;
+	background-position:center;
+}
+
+
+
+
+
+
+
+</style>
+
+<body class="bbg" id="style-2" oncontextmenu="return false" ondragstart="return false;" ondrop="return false;">
+
+<table class="menu" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="55"></td></tr>
+<tr><td><div class="mb">
+
+<a href="index.html"><div class="mb_lh"><div class="mb_logo"></div></div></a>
+<a href="home.html"><div class="btn_1"></div></a>
+<a href="plants.html"><div class="btn_2"></div>
+<a href="animals.html"><div class="btn_3"></div>
+<a href="micro.html"><div class="btn_5"></div>
+<a href="mov_glry.html"><div class="btn_4"></div>
+<a href="exercise.html"><div class="btn_6"></div>
+
+
+</div></td></tr>
+</table>
+
+
+
+<div class="bar">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+<tr>
+<td width="55"><a href="index.html"><div class="btn_back"></div></a>
+</td><td><div class="title"><b>ජීවීන් වර්ගීකරණය හා නාමකරණය</b></div></td>
+
+</tr></table>
+
+</div>
+
+<div class="face_cut"></div>
+
+<div class="face">
+
+<p align="justify"><b>
+මිහිතලය මත වෙසෙන ජීවීන් විශාල සංඛ්‍යාවක් අද වනවිට විද්‍යාඥයන් විසින් සොයාගෙන තිබේ.
+එපමණක් නොව ඉදිරියටත් නව ජීවීන් වර්ග හමුවනවාට සැකයක් නැත. නමුත් මෙසේ සොයාගත්
+ජීවීන් ප්‍රමාණයක් එකවර අධ්‍යනය කිරීම ඉතාමත් අසීරු කාර්යයකි. එබැවින් මෙම ජීවීන්ගේ ආවේණික ලක්ෂණ අනුව 
+වර්ග කිරීමක්, නැත හොත් 'වර්ගීකරණයක්'  අවශ්‍ය වේ. ඈත අතීතයේ සිට අද දක්වාම, මෙසේ හඳුනාගත් ජීවීන්
+විවිධ වර්ගීකරණයන්ට ලක්කර තිබේ. කෙසේ වෙතත් මෙම වැඩසටහන තුළ දී ප්‍රධාන ජීවී කාණ්ඩ ත්‍රිත්වයක්
+වශයෙන් ජීවීන් වර්ගීකරණය පිළිබඳ කරුණු ගොනු කර තිබේ. පහතින් දැක්වෙන්නේ එම කාණ්ඩ ත්‍රිත්වයයි.
+ශාක, සතුන් සහ ක්ෂුද්‍ර ජීවීන් යන මේවායින් විස්තර ගවේෂණය සඳහා අවශ්‍ය කාණ්ඩය මත කිල්‍ක් කරන්න.
+</b></p>
+
+<br><br>
+
+<center>
+<table border="0" width="80%">
+<tr>
+<td align="center"><a class="link" href="plants.html"><div class="img_1"><div class="img_h"></div></div><div class="img_d">ශාක</div></a></td>
+<td align="center"><a class="link" href="animals.html"><div class="img_2"><div class="img_h"></div></div><div class="img_d">සතුන්</div></a></td>
+<td align="center"><a class="link" href="micro.html"><div class="img_3"><div class="img_h"></div></div><div class="img_d">ක්ෂුද්‍ර ජීවීන්</div></a></td>
+</table>
+</center>
+
+<br><br>
+
+<p align="justify"><b>
+මෙහි ඇතුළත් කාණ්ඩ තුනෙහි අනු කොටස් පහතින් බෙදා දක්වා ඇත. එම අනු කොටසක් තේරීමෙන් හෝ ඔබට ඒ කොටස් පිළිබඳ අධ්‍යනය කළ හැක.  
+</b></p>
+
+
+<br><br>
+
+
+<table border="0" align="center" width="80%" cellpadding="10px">
+<tr>
+<td align="center"><a class="link" href="plants.html"><div class="blk_1"></div></a></td>
+<td align="center"><a class="link" href="animals.html"><div class="blk_2"></div></a></td>
+<td align="center"><a class="link" href="micro.html"><div class="blk_3"></div></a></td>
+</tr>
+<tr>
+<td align="center"><div class="blk_1_1"><div class="blk_h">
+<a class="ad" href="plants.html#flowered">සපුෂ්ප ශාක</a>
+<font size="4" style="text-align:left;line-height:25px">
+<ul type="square">
+<li><a class="ad" href="plants.html#one_seed">ඒක බීජ පත්‍රී</a>
+<li><a class="ad" href="plants.html#two_seed">ද්වී බීජ පත්‍රී</a>
+</ul>
+</font>
+</div></div></td>
+<td align="center"><div class="blk_2_1"><div class="blk_h">
+<a class="ad" href="animals.html#invertebrates">අපෘෂ්ඨවංශීන්</a>
+<font size="4" style="text-align:left;line-height:25px">
+<ul type="square">
+<li><a class="ad" href="animals.html#coelenterataone">සීලෙන්ටරේටා</a>
+<li><a class="ad" href="animals.html#annelida">ඇනෙලිඩා</a>
+<li><a class="ad" href="animals.html#mollusca">මොලුස්කා</a>
+<li><a class="ad" href="animals.html#arthropoda">ආත්‍රෙපෝඩා</a>
+</ul>
+</font>
+</div></div></td>
+<td align="center"><div class="blk_3_1"><div class="blk_h">
+<a class="ad" href="micro.html">ක්ෂුද්‍ර ජීවීන්</a>
+<font size="4" style="text-align:left;line-height:25px">
+<ul type="square">
+<li><a class="ad" href="micro.html#bacteria">බැක්ටීරියා</a>
+<li><a class="ad" href="micro.html#algae">ඇල්ගී</a>
+<li><a class="ad" href="micro.html#fungi">දිලීර</a>
+<li><a class="ad" href="micro.html#protozoa">ප්‍රොටොසෝවා</a>
+<li><a class="ad" href="micro.html#virus">වෛරස</a>
+</ul>
+</font>
+</div></div></td>
+</tr>
+<tr>
+<td align="center"><div class="blk_1_2"><div class="blk_h">
+<a class="ad" href="plants.html#">අපුෂ්ප ශාක</a>
+<font size="4" style="text-align:left;line-height:25px">
+<ul type="square">
+<li><a class="ad" href="plants.html#seeding">බීජ හට ගන්නා</a>
+<li><a class="ad" href="plants.html#no_seeding">බීජ හට නොගන්නා</a>
+</ul>
+</font>
+</div></div></td>
+<td align="center"><div class="blk_2_2"><div class="blk_h">
+<a class="ad" href="animals.html#vertebrates">පෘෂ්ඨවංශීන්</a>
+<font size="4" style="text-align:left;line-height:25px">
+<ul type="square">
+<li><a class="ad" href="animals.html#pisces">පිස්කේස්</a>
+<li><a class="ad" href="animals.html#amphibians">ඇම්පිබියා</a>
+<li><a class="ad" href="animals.html#reptilia">රෙප්ටීලියා</a>
+<li><a class="ad" href="animals.html#aves">ආවේස්</a>
+<li><a class="ad" href="animals.html#mammal">මැමේලියා</a>
+</ul>
+</font>
+</div></div></td>
+</tr>
+</table>
+
+
+
+
+
+<br>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

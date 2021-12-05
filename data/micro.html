@@ -1,0 +1,731 @@
+﻿<head><title>ක්ෂුද්‍ර ජීවීන් වර්ගීකරණය</title></head>
+<style>
+.bbg {
+	background-color:#D9DBD6;
+	margin:0px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor:default;
+}
+
+
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#wrapper
+{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+
+#style-2::-webkit-scrollbar-track
+{
+	background-image:url('data/scrl_track.png');
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	border-radius: 0px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 16px;
+	background-color: #F5F5F5;
+	max-height: 50px;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 0px;
+	background-color: #009688;
+	background-image:url('data/scroll.png');
+	background-repeat:no-repeat;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	opacity:0.4;
+	background-position:center;
+}
+
+
+
+.bar {
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+	background-color:#009688;
+	width:100%;
+	height:55px;
+	position:fixed;	
+}
+.title {
+	color:#FFFFFF;
+	font-size:30px;
+	margin-left:10px;
+	text-shadow:2px 2px 6px #595959;
+	line-height:55px;
+}
+.btn_back {
+	background-image:url('data/back_btn.png');
+	background-color:#009688;
+	background-repeat:no-repeat;
+	background-position:center;
+	width:55px;
+	height:55px;
+	transition-duration:0.2s;
+	cursor:default;
+	transition-property:background-color;
+}
+.btn_back:hover {
+	background-color:#00C4B0;
+}
+.btn_back:active {
+	background-color:#006F64;
+}
+.menu {
+	height:100%;
+	width:20px;
+	position:fixed;
+	transition-duration:0.5s;
+	cursor:default;
+	transition-property:width;
+}
+.menu:hover {
+	width:270px;
+}
+.mb {
+
+	margin-left:0px;
+	background-color:#FFFFFF;
+	height:90%;
+	width:99%;
+	border-radius:0px 7px 7px 0px;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn_1 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px 0px 0px 0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_1.png');
+	transition-property:background-color,background-align;
+}
+.btn_1:hover {
+	background-color:#00B3A0;
+}
+.btn_2 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_2.png');
+	transition-property:background-color,background-align;
+}
+.btn_2:hover {
+	background-color:#00B3A0;
+}
+.btn_3 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_3.png');
+	transition-property:background-color,background-align;
+}
+.btn_3:hover {
+	background-color:#00B3A0;
+}
+.btn_4 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_4.png');
+	transition-property:background-color,background-align;
+}
+.btn_4:hover {
+	background-color:#00B3A0;
+}
+.btn_5 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_5.png');
+	transition-property:background-color,background-align;
+}
+.btn_5:hover {
+	background-color:#00B3A0;
+}
+.btn_6 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_6.png');
+	transition-property:background-color,background-align;
+}
+.btn_6:hover {
+	background-color:#00B3A0;
+}
+.btn_7 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_7.png');
+	transition-property:background-color,background-align;
+}
+.btn_7:hover {
+	background-color:#00B3A0;
+}
+
+
+.btn_1:active {
+	background-color:#006F64;
+}
+.btn_2:active {
+	background-color:#006F64;
+}
+.btn_3:active {
+	background-color:#006F64;
+}
+.btn_4:active {
+	background-color:#006F64;
+}
+.btn_5:active {
+	background-color:#006F64;
+}
+.btn_6:active {
+	background-color:#006F64;
+}
+.btn_7:active {
+	background-color:#006F64;
+}
+.mb_logo {
+	width:100%;
+	height:120px;
+	background-image:url('data/main_menu/ani_logo.png');
+	background-position:right;
+	border-radius:0px 7px 0px 0px;
+	cursor:default;
+	transition-duration:0.4s;
+	transition-property:opacity;
+}
+.mb_lh {
+	width:100%;
+	height:120px;
+	background-color:#000000;
+	opacity:100;
+	cursor:default;
+	border-radius:0px 7px 0px 0px;
+}
+.mb_logo:hover{
+	opacity:0.6;
+}
+.mb_logo:active{
+	opacity:0.2;
+}
+.face_cut {
+	margin:0px;
+	width:100%;
+	height:55px;
+}
+.face {
+	margin-top:30px;
+	margin-right:30px;
+	margin-left:50px;
+}
+.link {
+	text-decoration:none;
+	cursor:default;
+	
+}
+
+.usbi1h {
+	width:200px;
+	height:200px;
+	background-color:#000000;
+	border-radius:7px;
+	opacity:0;
+	font-size:22px;
+	color:#FFFFFF;
+	text-align:center;
+	line-height:200px;
+	transition-duration:0.3s;
+	ransition-property:opacity;
+}
+.usbi1h:hover {
+	opacity:0.5
+}
+.usbi1h:active {
+	opacity:0.7
+}
+
+
+
+
+
+
+.usbi11 {
+	background-image:url('data/mro_img/cocci_bactaria_image_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+.usbi12 {
+	background-image:url('data/mro_img/bacillus_bacteria_image_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+.usbi13 {
+	background-image:url('data/mro_img/spirillum_bacteria_image_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+.usbi14 {
+	background-image:url('data/mro_img/vibrio_bacteria_image_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+
+
+.usbi21 {
+	background-image:url('data/mro_img/green_algea_image_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+.usbi22 {
+	background-image:url('data/mro_img/red_algea_image_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+.usbi23 {
+	background-image:url('data/mro_img/brown_algea_image_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+
+.usbi31 {
+	background-image:url('data/mro_img/amoeba_image_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+.usbi32 {
+	background-image:url('data/mro_img/paramecium_image_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+.usbi33 {
+	background-image:url('data/mro_img/euglena_image_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+
+
+.usbi41 {
+	background-image:url('data/mro_img/virus_1_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+.usbi42 {
+	background-image:url('data/mro_img/virus_2_s.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	border-radius:7px;
+	border-radius:7px;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+
+</style>
+
+<body class="bbg" id="style-2" oncontextmenu="return false" ondragstart="return false;" ondrop="return false;">
+
+<table class="menu" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="55"></td></tr>
+<tr><td><div class="mb">
+
+<a href="index.html"><div class="mb_lh"><div class="mb_logo"></div></div></a>
+<a href="home.html"><div class="btn_1"></div></a>
+<a href="plants.html"><div class="btn_2"></div>
+<a href="animals.html"><div class="btn_3"></div>
+<a href="micro.html"><div class="btn_5"></div>
+<a href="mov_glry.html"><div class="btn_4"></div>
+<a href="exercise.html"><div class="btn_6"></div>
+
+</div></td></tr>
+</table>
+
+
+
+<div class="bar">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+<tr>
+<td width="55"><a href="home.html"><div class="btn_back"></div></a>
+</td><td><div class="title"><b>ක්ෂුද්‍ර ජීවීන් වර්ගීකරණය</b></div></td>
+
+</tr></table>
+
+</div>
+
+<div class="face_cut"></div>
+
+<div class="face">
+
+
+<a name="bacteria"> </a>
+<p align="justify">
+ක්ෂුද්‍ර ජීවීන් යනු පියවි ඇසට නොපෙනෙන ජීවීන් වේ. මෙම කාණ්ඩයට අයත් වන්නේ බැක්ටීරියා, දිලීර, ප්‍රොටොසෝවා හා වෛරස යන ඒවායි.
+</p>
+
+<h2>බැක්ටීරියා</h2>
+
+
+<p align="justify">
+වයිරස හැරුණු විට ඉතා කුඩා ජීවී විශේෂය බැක්ටීරියා වේ. ජීවියෙකුට ජීවත් විය නොහැකි පරිසරවල පවා බැක්ටීරියාවලට ජීවත් විය හැක. බැක්ටීරියා ප්‍රධාන වශයෙන් වර්ග හතරක් වේ.
+
+<ul type="square">
+<li>ගෝලාකාර හෙවත් කොකුස
+<li>දණ්ඩාකාර හෙවත් බැසිල
+<li>සර්පිලාකාර හෙවත් ස්පිරිලුම
+<li>කොමා ආකාර හෙවත් විබ්‍රියෝ
+</ul>
+
+</p>
+
+
+
+<table border="0" width="70%" align="center"><tr><td>
+
+<table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi11"><a class="link" target="_blank" href="img_view.html#cocci_bactaria_image"><div class="usbi1h">කොකුස</div></a></td>
+</tr>
+</table></td>
+
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi12"><a class="link" target="_blank" href="img_view.html#bacillus_bacteria_image"><div class="usbi1h">බැසිල</div></a></td>
+</tr>
+</table></td>
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi13"><a class="link" target="_blank" href="img_view.html#spirillum_bacteria_image"><div class="usbi1h">ස්පිරිලුම</div></a></td>
+</tr>
+</table>
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi14"><a class="link" target="_blank" href="img_view.html#vibrio_bacteria_image"><div class="usbi1h">විබ්‍රියෝ</div></a></td>
+</tr>
+</table>
+
+</td></tr></table>
+
+<p align="justify">
+ජීවය පැවතිය හැකි ඕනෑම ස්ථානයක මෙම බැක්ටීරියා ඛාණ්ඩයට ජීවත් වීමේ හැකියාව ඇත. බැක්ටීරියා වර්ග කිහිපයක් ස්වයංපෝශීව ප්‍රභාසංස්ලේෂණයෙන් හෝ රසායනික ප්‍රභාසංස්ලේෂණයෙන් ආහාර නිපදවා ගනී.
+සමහර බැක්ටීරියා විශේෂ විෂමපෝෂීව අනිකුත් ජීවීන් නිපදවන ආහාර මත යැපේ. ඔවුන්ගෙන් ඇතැම් බැක්ටීරියා මැරුණු ශාක හෝ සත්ත්ව දේහ මත යැපේ. මේවා මෘතෝපජීවී බැක්ටීරියාවන් ය.
+ඇතැම් බැක්ටීරියා විශේෂ පරපෝෂිතයන් ය. ඔක්සිජන් ආධාරයක් නොමැතිව ශක්තිය නිපවාගත හැකි බැක්ටීරියා නිර්වායු බැක්ටීරියා වේ. බැක්ටීරියා ආර්ථික වශයෙන් ද වැදගත්  වේ. 
+</p>
+
+<ul type="square">
+<li>කිරි මිදවීම
+<li>යෝගට් සහ කේජු සෑදීම
+<li>සම් පදම් කිරීම
+<li>තේ කොළ සකස් කිරීම
+<li>පොල් ලෙලිවලින් හා තෘණ පත්‍රවලින් තත්තු වෙන් කිරීම
+</ul>
+
+<p align="justify">
+ලැක්ටොබැසිලස නම් බැක්ටීරියා වර්ගය අපේ ආහාර මාර්ගයේ වෙසෙන අතර එම බැක්ටීරියා ආහාර ජීර්ණයට ද උපකාරී වේ. විටමින් K නිපදවන බැක්ටීරියා ද ඇත. 
+එසේම සමහර බැක්ටීරියා මිනිසාට අහිතකර ය. ‍මේවා ව්‍යාධිජනක බැක්ටීරියා ලෙස හැඳින්වේ. මෙවැනි බැක්ටීරියා මගින් ඇතිවිය හැකි රෝග කිහිපයක් පහත දැක්වේ. 
+</p>
+
+<ul type="square">
+<li>කොළරාව
+<li>ක්ෂය රෝගය
+<li>උණසන්නිපාතය
+<li>පිටගැස්ම
+<li>ඩිප්තීරියාව
+<li>ගොනෝරියාව
+<li>උපදංශය
+<a name="algae"> </a>
+<li>ලැදුරු
+</ul>
+
+<h2>ඇල්ගී</h2>
+
+<p align="justify">
+ඇල්ගී ස්වංපෝශී ජීවී විශේෂයකි. හරිතප්‍රද සහිත සංවිධානය වූ න්‍යෂ්ටියක් ඇති සරළ ජීවී ඛාණ්ඩයක් වන ඇල්ගී බොහෝමයක් ජලයේ වෙසෙන අතර ඇතැම් විශේෂ
+භෞමිකව ද දැකගත හැක. සමහර ඇල්ගී ඒක සෛලික වන අතර සමහරෙක් ඇල්ගී බහු සෛලික වේ. ඇල්ගීන්ගේ දෙහයේ ප්‍රමාණය විවිධාකාර වේ. එනම්
+500nm සිට 30m දක්වා ප්‍රමාණවලින් ඇල් දැකගත හැක. ඇල්ගී දේහය මුල්, කඳ, පත්‍ර ලෙස විභේදනයක් නොපෙන්වයි. මෙවැනි දේහ තලසක් ලෙස හැඳින්වේ.
+</p>
+
+
+<table border="0" width="70%" align="center"><tr><td>
+
+<table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi21"><a class="link" target="_blank" href="img_view.html#green_algea_image"><div class="usbi1h">හරිත ඇල්ගී</div></a></td>
+</tr>
+</table></td>
+
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi22"><a class="link" target="_blank" href="img_view.html#red_algea_image"><div class="usbi1h">රතු ඇල්ගී</div></a></td>
+</tr>
+</table></td>
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi23"><a class="link" target="_blank" href="img_view.html#brown_algea_image"><div class="usbi1h">දුඹුරු ඇල්ගී</div></a></td>
+</tr>
+</table>
+
+</td></tr></table>
+<a name="fungi"> </a>
+<br><br>
+<h2>දිලීර</h2>
+
+<p align="justify">
+හරිතපුද නොමැති විෂමපෝෂී ජීවීන් ය. ඒක සෛලික හා බහු සෛලික ලොස විශේෂ පවතී. මේවායේ ශාක දේහය තලසකි. මෙය දිලීර ජාලය හෙවත් <b>මයිසීලියම</b> යනුවෙන් හැඳින්වේ.
+ශාඛා බෙදුණු නාළාකාර සූත්‍රිකාවලින් මයිසීලියම නිර්මාණය වී ඇත. දිලීරවල සෛල බිත්ති කයිටීන්වලින් සෑදී ඇත. ඇතැම් දිලීර පරපෝශී වන අතර, දිලීර බොහොමයක් මළ සත්ත්ව හා ශාක අවශේෂ මත යැපේ.
+<b>ලයිකන</b> යනුවෙන් හැඳින්වෙන්නේ ඇල්ගී සහ දිලීර එක්ව සාදන සහජීවී සංගම් වේ. පහතින් දැක්වෙන්නේ දිලීර සඳහා නිදසුන් කිහිපයකි.
+</p>
+
+<ul type="square">
+<li>සයිගොමයිටීස් - මියුකෝර් හෙවත් පාන් පුස්
+<li>ඇස්කොමයිටීස් - පෙනිසිලින් නොට්ටුම්
+<a name="protozoa"> </a>
+<li>බැසිඩියොමයිටීස් - හතු
+</ul>
+
+
+<h2>ප්‍රොටෝසෝවා</h2>
+
+<p align="justify">
+ප්‍රොටෝසෝවා යනු දේහය තනි සෛලයකින් සෑදී ඇති සරළ අන්වීක්ෂීය ජීවීන්ය. මොවුන් හට සෛල බිත්තියක් නොමැත.මොවුන් විෂම පෝශී ජීවීන් වේ. ප්‍රොටෝසෝවාවන් සංචරණය සඳහා විවිධ ව්‍යුහ උපයෝගී කරගනී.
+</p>
+
+<ul type="square">
+<li>පැරමීසියම් - පක්ෂ්ම
+<li>ඇමීබා - ව්‍යාජ පාද
+<li>එවුග්ලිනා - කෂිකා
+</ul>
+
+
+<table border="0" width="70%" align="center"><tr><td>
+
+<table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi31"><a class="link" target="_blank" href="img_view.html#amoeba_image"><div class="usbi1h">ඇමීබා</div></a></td>
+</tr>
+</table></td>
+
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi32"><a class="link" target="_blank" href="img_view.html#paramecium_image"><div class="usbi1h">පැරමීසියම්</div></a></td>
+</tr>
+</table></td>
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi33"><a class="link" target="_blank" href="img_view.html#euglena_image"><div class="usbi1h">එවුග්ලිනා</div></a></td>
+</tr>
+</table>
+
+</td></tr></table>
+
+
+<a name="virus"> </a>
+
+<h2>වෛරස</h2>
+
+<p align="justify">
+වෛරස ජීවී මෙන්ම අජීවී ලක්ෂණ ද පෙන්නුම් කරති. බැක්ටීරියාවක විශාලයෙන් දහයෙන් පංගුවක් පමණ වන වෛරස බොහෝමයක් හානිකර වේ.
+වෛරසයක් සෛලයක් නොවේ. ඒවා වටා පිහිටි ප්‍රෝටීන වැස්මකින් වෛරස සෑදී ඇත. නියුක්ලෙයික් අම්ලය ලෙස තිබෙන්නේ DNA හෝ RNA යන ඒවායි එකකි.
+වෛරස ජීව ක්‍රියා සිදු නොකරන අතර එය රසායන දුව්‍යයක් පමණි. වෛරසයකට සුදුසු ධාරක සෛලයක් ලැබුණු සැනින් එහි සෛල බටලය බිඳ එය තුළට  DNA හෝ RNA
+යන ඒවා මුදා හැරේ. පසුව එම සෛලය තුළ වෛරස සෑදේ පසුව එම සෛලය පිපිරී යාමෙන් නව වෛරස මුදා හැරේ.
+පහතින් දැක්වෙන්නේ වෛරස සඳහා නිදසුන් ය.
+</p>
+
+<ul type="square">
+<li>මිරිස් කොළ කොඩ වීම
+<li>ඩෙංගු රෝගය
+<li>සෙම්ප්‍රතික්ෂාව
+<li>ඉන්ෆ්ලුවෙන්සා
+</ul>
+
+
+
+<table border="0" width="70%" align="center"><tr><td>
+
+<table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi41"><a class="link" target="_blank" href="img_view.html#virus_1"><div class="usbi1h">වෛරසයක හැඩය</div></a></td>
+</tr>
+</table></td>
+
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td class="usbi42"><a class="link" target="_blank" href="img_view.html#virus_2"><div class="usbi1h">වෛරසයක්</div></a></td>
+</tr>
+</table></td>
+
+</td></tr></table>
+
+<br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

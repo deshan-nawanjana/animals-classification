@@ -1,0 +1,562 @@
+﻿<html>
+<head><title>ජීවීන් වර්ගීකරණය හා නාමකරණය</title>
+<style>
+.bbg {
+	background-color:#D9DBD6;
+	margin:0px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor:default;
+}
+
+.bar {
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+	background-color:#009688;
+	width:100%;
+	height:55px;
+	position:fixed;	
+}
+.title {
+	color:#FFFFFF;
+	font-size:30px;
+	margin-left:10px;
+	text-shadow:2px 2px 6px #595959;
+	line-height:55px;
+}
+.btn_back {
+	background-image:url('data/back_btn.png');
+	background-color:#009688;
+	background-repeat:no-repeat;
+	background-position:center;
+	width:55px;
+	height:55px;
+	transition-duration:0.2s;
+	cursor:default;
+	transition-property:background-color;
+}
+.btn_back:hover {
+	background-color:#00C4B0;
+}
+.btn_back:active {
+	background-color:#006F64;
+}
+.menu {
+	height:100%;
+	width:20px;
+	position:fixed;
+	transition-duration:0.5s;
+	cursor:default;
+	transition-property:width;
+}
+.menu:hover {
+	width:270px;
+}
+.mb {
+
+	margin-left:0px;
+	background-color:#FFFFFF;
+	height:90%;
+	width:99%;
+	border-radius:0px 7px 7px 0px;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn_1 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px 0px 0px 0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_1.png');
+	transition-property:background-color,background-align;
+}
+.btn_1:hover {
+	background-color:#00B3A0;
+}
+.btn_2 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_2.png');
+	transition-property:background-color,background-align;
+}
+.btn_2:hover {
+	background-color:#00B3A0;
+}
+.btn_3 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_3.png');
+	transition-property:background-color,background-align;
+}
+.btn_3:hover {
+	background-color:#00B3A0;
+}
+.btn_4 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_4.png');
+	transition-property:background-color,background-align;
+}
+.btn_4:hover {
+	background-color:#00B3A0;
+}
+.btn_5 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_5.png');
+	transition-property:background-color,background-align;
+}
+.btn_5:hover {
+	background-color:#00B3A0;
+}
+.btn_6 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_6.png');
+	transition-property:background-color,background-align;
+}
+.btn_6:hover {
+	background-color:#00B3A0;
+}
+.btn_7 {
+	width:100%;
+	height:55px;
+	background-color:#FFFFFF;
+	border-radius:0px;
+	transition-duration:0.4s;
+	cursor:default;
+	background-position:right;
+	background-image:url('data/main_menu/btn_7.png');
+	transition-property:background-color,background-align;
+}
+.btn_7:hover {
+	background-color:#00B3A0;
+}
+
+
+.btn_1:active {
+	background-color:#006F64;
+}
+.btn_2:active {
+	background-color:#006F64;
+}
+.btn_3:active {
+	background-color:#006F64;
+}
+.btn_4:active {
+	background-color:#006F64;
+}
+.btn_5:active {
+	background-color:#006F64;
+}
+.btn_6:active {
+	background-color:#006F64;
+}
+.btn_7:active {
+	background-color:#006F64;
+}
+.mb_logo {
+	width:100%;
+	height:120px;
+	background-image:url('data/main_menu/ani_logo.png');
+	background-position:right;
+	border-radius:0px 7px 0px 0px;
+	cursor:default;
+	transition-duration:0.4s;
+	transition-property:opacity;
+}
+.mb_lh {
+	width:100%;
+	height:120px;
+	background-color:#000000;
+	opacity:100;
+	cursor:default;
+	border-radius:0px 7px 0px 0px;
+}
+.mb_logo:hover{
+	opacity:0.6;
+}
+.mb_logo:active{
+	opacity:0.2;
+}
+.face_cut {
+	margin:0px;
+	width:100%;
+	height:55px;
+}
+.face {
+	margin-top:30px;
+	margin-right:30px;
+	margin-left:50px;
+}
+.link {
+	text-decoration:none;
+	cursor:default;
+	
+}
+
+
+.force-overflow
+{
+	min-height: 450px;
+}
+
+#wrapper
+{
+	text-align: center;
+	width: 500px;
+	margin: auto;
+}
+
+
+#style-2::-webkit-scrollbar-track
+{
+	background-image:url('data/scrl_track.png');
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	border-radius: 0px;
+	background-color: #F5F5F5;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 16px;
+	background-color: #F5F5F5;
+	max-height: 50px;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 0px;
+	background-color: #009688;
+	background-image:url('data/scroll.png');
+	background-repeat:no-repeat;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	opacity:0.4;
+	background-position:center;
+}
+
+
+
+
+.usbi1h {
+	width:200px;
+	height:200px;
+	background-color:#000000;
+	opacity:0;
+	font-size:22px;
+	color:#FFFFFF;
+	text-align:center;
+	line-height:200px;
+	transition-duration:0.3s;
+	ransition-property:opacity;
+}
+.usbi1h:hover {
+	opacity:0.5;
+}
+.usbi1h:active {
+	opacity:0.7
+}
+
+.usbi2h {
+	width:200px;
+	height:200px;
+	background-color:#000000;
+	opacity:0;
+	font-size:22px;
+	color:#FFFFFF;
+	border-radius:8px;
+	text-align:center;
+	line-height:200px;
+	transition-duration:0.3s;
+	ransition-property:opacity;
+}
+.usbi2h:hover {
+	opacity:0.5;
+}
+.usbi2h:active {
+	opacity:0.7
+}
+
+.usbi1 {
+	background-image:url('data/mov/thumbs/Pnt5gItXjse.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	border-radius:8px 0px 0px 0px;
+	line-height:200px;
+}
+
+.usbi2 {
+	background-image:url('data/mov/thumbs/Lg5Gdsnfxs.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+
+.usbi3 {
+	background-image:url('data/mov/thumbs/hfVetc2Ft546d.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+
+.usbi4 {
+	background-image:url('data/mov/thumbs/D3vsfJ7vdmn5.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	background-position:center;
+	color:#FFFFFF;
+	border-radius:0px 8px 0px 0px;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+
+
+.usbi5 {
+	background-image:url('data/mov/thumbs/e5D4guyj6Gee4.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+.usbi6 {
+	background-image:url('data/mov/thumbs/Y4g4ob7fghf.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+.usbi7 {
+	background-image:url('data/mov/thumbs/H5dvr4fsdnu8.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	line-height:200px;
+}
+.usbi8 {
+	background-image:url('data/mov/thumbs/E5gsdg5qa4yD.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	border-radius:0px 0px 8px 0px;
+	line-height:200px;
+}
+
+
+.usbi9 {
+	background-image:url('data/mov/thumbs/fh5zfF54Fevdd.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	border-radius:0px 0px 0px 8px;
+	line-height:200px;
+}
+
+.usbi12 {
+	background-image:url('data/mov/thumbs/D4gSSdgryv.png');
+	width:200px;
+	height:200px;
+	background-color:#FFFFFF;
+	background-position:center;
+	color:#FFFFFF;
+	font-size:22px;
+	text-align:center;
+	border-radius:0px 0px 8px 0px;
+	line-height:200px;
+}
+</style>
+
+<body id="style-2" class="bbg" oncontextmenu="return false" ondragstart="return false;" ondrop="return false;">
+
+<table class="menu" border="0" cellpadding="0" cellspacing="0">
+<tr><td height="55"></td></tr>
+<tr><td><div class="mb">
+
+<a href="index.html"><div class="mb_lh"><div class="mb_logo"></div></div></a>
+<a href="home.html"><div class="btn_1"></div></a>
+<a href="plants.html"><div class="btn_2"></div>
+<a href="animals.html"><div class="btn_3"></div>
+<a href="micro.html"><div class="btn_5"></div>
+<a href="mov_glry.html"><div class="btn_4"></div>
+<a href="exercise.html"><div class="btn_6"></div>
+
+</div></td></tr>
+</table>
+
+
+
+<div class="bar">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%">
+<tr>
+<td width="55"><a href="home.html"><div class="btn_back"></div></a>
+</td><td><div class="title"><b>වීඩියෝ ගැලරිය</b></div></td>
+
+</tr></table>
+
+</div>
+
+<div class="face_cut"></div>
+
+<div class="face">
+
+
+
+
+
+
+
+<table border="0" cellpadding="0" cellspacing="0" align="center"><tr>
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center"><tr>
+<td class="usbi1"><a class="link" target="_blank" href="data/mov/Pnt5gItXjse.html"><div style="border-radius:8px 0px 0px 0px;" class="usbi2h">ශාක වර්ධනය</div></a></td>
+</tr></table></td>
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center"><tr>
+<td class="usbi2"><a class="link" target="_blank" href="data/mov/Lg5Gdsnfxs.html"><div style="border-radius:0px 0px 0px 0px;" class="usbi1h">කොරල් ශාක</div></a></td>
+</tr></table></td>
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center"><tr>
+<td class="usbi3"><a class="link" target="_blank" href="data/mov/hfVetc2Ft546d.html"><div style="border-radius:0px 0px 0px 0px;" class="usbi1h">බූවල්ලා</div></a></td>
+</tr></table></td>
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center"><tr>
+<td class="usbi4"><a class="link" target="_blank" href="data/mov/D3vsfJ7vdmn5.html"><div style="border-radius:0px 8px 0px 0px;" class="usbi2h">සමනලයා</div></a></td>
+</tr></table></td>
+
+</tr><tr>
+
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center"><tr>
+<td class="usbi5"><a class="link" target="_blank" href="data/mov/e5D4guyj6Gee4.html"><div style="border-radius:0px 0px 0px 0px;" class="usbi1h">පැස්බරා</div></a></td>
+</tr></table></td>
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center"><tr>
+<td class="usbi6"><a class="link" target="_blank" href="data/mov/Y4g4ob7fghf.html"><div style="border-radius:0px 0px 0px 0px;" class="usbi1h">ප්ලැටිපසා</div></a></td>
+</tr></table></td>
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center"><tr>
+<td class="usbi7"><a class="link" target="_blank" href="data/mov/H5dvr4fsdnu8.html"><div style="border-radius:0px 0px 0px 0px;" class="usbi1h">තල්මසා</div></a></td>
+</tr></table></td>
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center"><tr>
+<td class="usbi8"><a class="link" target="_blank" href="data/mov/E5gsdg5qa4yD.html"><div style="border-radius:0px 0px 0px 0px;" class="usbi2h">ඇමීබා</div></a></td>
+</tr></table></td>
+
+
+</tr><tr>
+
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center"><tr>
+<td class="usbi9"><a class="link" target="_blank" href="data/mov/fh5zfF54Fevdd.html"><div style="border-radius:0px 0px 0px 8px;" class="usbi2h">එවුග්ලිනා</div></a></td>
+</tr></table></td>
+
+
+<td><table class="usb1" cellpadding="0" cellspacing="0" align="center"><tr>
+<td class="usbi12"><a class="link" target="_blank" href="data/mov/D4gSSdgryv.html"><div style="border-radius:0px 0px 8px 0px;" class="usbi2h">පැරමීසියම්</div></a></td>
+</tr></table></td>
+
+
+
+</tr></table>
+
+
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

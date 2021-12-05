@@ -1,0 +1,275 @@
+﻿<head><title>ජීවීන් වර්ගීකරණය හා නාමකරණය</title></head>
+<style>
+.bbg {
+	background-image:url('data/face.png');
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor:default;
+	margin:0px;
+}
+
+.main_box {
+	background-color:rgb(246, 248, 248);
+	height:95%;
+	width:60%;
+	border-radius: 7px 7px 7px 7px;
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+.main_logo {
+	border-radius: 7px 7px 7px 7px;
+}
+.up_head {
+	border-radius: 7px 7px 7px 7px;
+	background-color:#FFFFFF;
+}
+.title {
+	color:#202020;
+	font-size:35px;
+	text-align:center;
+	text-shadow:2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+.down_box {
+	border-radius: 0px 0px 7px 7px;
+}
+.btn_lock {
+	margin-top:10px;
+	width:100px;
+	height:40px;
+}
+.btn_lock2 {
+	margin-top:10px;
+	width:210px;
+	height:40px;
+}
+.btn {
+	background-color:#999999;
+	border-radius: 4px 4px 4px 4px;
+	margin:5px;
+	width:100px;
+	height:40px;
+	color:#333333;
+	text-align:center;
+	line-height:40px;
+	cursor:default;
+	transition-duration:0.2s;
+	transition-property:box-shadow,color,background-color;
+}
+.btn:hover {
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+	background-color:rgb(0,150,136);
+	box-shadow:inset 0px 0px 6px #333333;
+	color:#FFFFFF;
+}
+
+.btn2 {
+	background-color:#999999;
+	border-radius: 4px 4px 4px 4px;
+	margin:5px;
+	width:200px;
+	height:40px;
+	color:#333333;
+	text-align:center;
+	line-height:40px;
+	cursor:default;
+	transition-duration:0.2s;
+	transition-property:box-shadow,color,background-color;
+}
+.btn2:hover {
+	box-shadow:0px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn2:active {
+	background-color:rgb(0,150,136);
+	box-shadow:inset 0px 0px 6px #333333;
+	color:#FFFFFF;
+}
+
+.des {
+	margin:15px;
+}
+.link {
+	text-decoration:none;
+}
+.plug_1 {
+	font-family:Trebuchet MS;
+	width:152px;
+	height:152px;
+	background-image:url('data/plug-x/mx_bws.png');
+	border-radius: 7px;
+	transition-duration:0.2s;
+	transition-property:opacity,color,box-shadow;
+}
+.plug_2 {
+	font-family:Trebuchet MS;
+	width:152px;
+	height:152px;
+	background-image:url('data/plug-x/flh_play.png');
+	border-radius: 7px;
+	transition-duration:0.2s;
+	transition-property:opacity,color,box-shadow;
+}
+.plug_3 {
+	font-family:Trebuchet MS;
+	width:152px;
+	height:152px;
+	background-image:url('data/plug-x/sin_ime.png');
+	border-radius: 7px;
+	transition-duration:0.2s;
+	transition-property:opacity,color,box-shadow;
+}
+.plug_1h {
+	width:152px;
+	height:152px;
+	background-color:#000000;
+	opacity: 0.0;
+	border-radius:7px;
+	text-align:center;
+	color:transparent;
+	line-height:52px;
+	text-shadow:1px 1px 3px #000000;
+	transition-duration:0.4s;
+	transition-property:opacity,color;
+}
+
+.plug_1:hover .plug_1h {
+	opacity: 0.4;
+	color:#FFFFFF;
+}
+
+.plug_1:active {
+	box-shadow:inset 0px 0px 9px #000000;
+}
+
+.plug_2:hover .plug_1h {
+	opacity: 0.4;
+	color:#FFFFFF;
+}
+
+.plug_2:active {
+	box-shadow:inset 0px 0px 9px #000000;
+}
+.plug_3:hover .plug_1h {
+	opacity: 0.4;
+	color:#FFFFFF;
+}
+
+.plug_3:active {
+	box-shadow:inset 0px 0px 9px #000000;
+}
+
+.abt_out_box {
+	position:fixed;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.5);
+	top:0px;
+	opacity:0;
+	top:-1000px;
+	transition-duration:0.9s;
+	transition-proeprty:top,opacity;
+}
+.abt_box {
+	text-align:left;
+	padding:20px;
+	box-shadow:0px 0px 9px #000000;
+	width:360px;
+	height:120px;
+	line-height:30px;
+	background:rgba(0,0,0,0.9);
+	border-radius:6px;
+	font-family:Trebuchet MS;
+	color:#888;
+}
+
+.jvc_img {
+	margin-bottom:10px;
+	margin-right:40px;
+}
+.clg {
+	width:100%;
+	font-size:22px;
+}
+</style>
+
+<body class="bbg" oncontextmenu="return false" ondragstart="return false;" ondrop="return false;">
+
+<div class="abt_out_box" onclick="ext()" id="bx_id">
+
+<table border="0" width="100%" height="100%">
+<td align="center">
+<div class="abt_box">
+
+<div class="clg"><img src="data/jvc.png" class="jvc_img" align="center">Joseph Vaz College</div>
+
+<b>දේශාන් නවාංජන (deshan.jvc@gmail.com)</b>
+
+</div>
+</td></table>
+</div>
+
+
+
+<div class="main_box">
+
+<table class="up_head" border="0" height="60%" width="100%">
+<tr>
+<td><div class="title"><b>වැඩසටහන භාවිතයට උපදෙස්</b></div></td>
+<tr></tr><td>
+<center>
+<table border="0" width="90%" height="100%"><tr>
+
+<td align="center"><div class="plug_1"><a target="_blank" class="link" href="https://drive.google.com/open?id=0B5G12lTctaFTMUU1TV9yV3ZYNUU"><div class="plug_1h"><br><br>Mozilla Firefox</div></div></a></td>
+<td align="center"><div class="plug_2"><a target="_blank" class="link" href="https://drive.google.com/open?id=0B5G12lTctaFTdF8xZXhSVUh3bkU"><div class="plug_1h"><br><br>Adobe Flash Player</div></div></a></td>
+<td align="center"><div class="plug_3"><a target="_blank" class="link" href="https://drive.google.com/open?id=0B5G12lTctaFTejVZV0xYU2wxRDg"><div class="plug_1h"><br><br>Sinhala Tamil IME</div></a></div></td>
+
+</tr></table>
+</center>
+</td>
+</tr>
+
+</table>
+
+<table border="0" height="39%" width="100%">
+<tr>
+<td colspan="2">
+<div class="des"><b>
+<p align="justify">
+මෙම වැඩසටහනේ ඇතුලත් කොටස් නිවැරදිව දර්ශණය වීම සඳහා ඉහතින් දක්වා ඇති මෘදුකාංග හෝ එවැනිම වෙනත්
+මෘදුකාංග ඔබේ පරිගණකයේ ස්ථාපනය කළ යුතු වේ. මෙම මෘදුකාංග මත එක් වරක් ක්ලික් කිරීමෙන් මෘදුකාංගය අන්තර්ජාල සම්බන්ධතාවයක් මගින් ලබා 
+ගත හැක. මෙම මෘදුකාංග සියල්ල ස්ථාපන කිරීමෙන් අනතුරුව මෙම වැඩසටහන නැවතත් මුල සිට ක්‍රියාත්මක කරන්න.</b><br><br></div>
+</p>
+
+</div>
+
+</tr><tr>
+
+<td height="40px" align="left"><div class="btn_lock"><a class="link" href="index.html"><div class="btn"><b>ආපසු</b></div></div></a></td>
+
+<td align="right"><div class="btn_lock2"><div class="btn2" onclick="abt()"><b><i>වැඩසටහන නිර්මාණය</i></b></div></div></td>
+
+</tr></table>
+
+</div>
+
+
+<script>
+function abt(){
+document.getElementById('bx_id').style.top="0px";
+document.getElementById('bx_id').style.opacity="1";
+}
+function ext(){
+document.getElementById('bx_id').style.top="-1000px";
+document.getElementById('bx_id').style.opacity="0";
+}
+</script>
